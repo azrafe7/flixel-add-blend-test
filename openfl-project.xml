@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project>
+	
+	<meta title="OpenflBlend" package="org.openfl.samples.displayingabitmap" version="1.0.0" company="OpenFL" />
+	<app main="OpenflMain" path="export" file="OpenflMain" />
+	
+	<!-- ____________________________ Window Settings ___________________________ -->
+
+	<!--These window settings apply to all targets-->
+	<window width="1024" height="576" fps="60" background="#ffffff" hardware="true" vsync="true" />
+
+	<!--HTML5-specific-->
+	<window if="html5" resizable="false" />
+
+	<!--Desktop-specific-->
+	<window if="desktop" orientation="landscape" fullscreen="false" resizable="true" />
+
+	<!--Mobile-specific-->
+	<window if="mobile" orientation="landscape" fullscreen="true" width="0" height="0" />
+
+	<set name="SWF_VERSION" value="11.8" />
+	
+	<haxelib name="openfl" />
+	
+
+
+	<!-- _____________________________ Path Settings ____________________________ -->
+
+	<set name="BUILD_DIR" value="export" />
+	<classpath name="source" />
+	<assets path="assets" rename="assets" />
+	
+</project>
