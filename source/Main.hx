@@ -11,7 +11,11 @@ class Main extends Sprite
 	
 	public function new()
 	{
+    #if (openfl_legacy)
+        trace("legacy");
+    #end
+    
 		super();
-		addChild(new FlxGame(GAME_WIDTH, GAME_HEIGHT, MainState, 1, 60, 60, true, true));
+		addChild(new FlxGame(GAME_WIDTH, GAME_HEIGHT, MainState, 1, 60, 60, true, false));
 	}
 }
