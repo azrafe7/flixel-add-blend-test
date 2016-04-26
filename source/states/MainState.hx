@@ -26,8 +26,12 @@ class MainState extends SortState
 		
 		addSortedSprite(new FlxSprite(0, 0, "assets/images/test/layer1.png"), 1).scrollFactor.set(0.8, 0.8);
 		
-		var layer2:FlxSprite = new FlxSprite(0, 0, "assets/images/test/layer2multiply.png");
-		layer2.blend = BlendMode.MULTIPLY;
+        var multiplyBMD = openfl.Assets.getBitmapData("assets/images/test/layer2multiply.png");
+    #if (openfl_legacy)
+        multiplyBMD.premultipliedAlpha = true; // <- !important
+    #end
+		var layer2:FlxSprite = new FlxSprite(0, 0, multiplyBMD);
+        layer2.blend = BlendMode.MULTIPLY;
 		addSortedSprite(layer2, 2);
 		
 		var layer3:FlxSprite = new FlxSprite(0, 0, "assets/images/test/layer3add.png");
