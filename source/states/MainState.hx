@@ -1,7 +1,5 @@
 package states;
 import entities.SortableSpriteGroup;
-import entities.character.CollisionMap;
-import entities.character.Harpae;
 import flixel.FlxCamera.FlxCameraFollowStyle;
 import flixel.FlxG;
 import flixel.FlxSprite;
@@ -19,8 +17,6 @@ class MainState extends SortState
 	{
 		super();
 	}
-	
-	private var harp:Harpae;
 	
 	override public function create():Void 
 	{
